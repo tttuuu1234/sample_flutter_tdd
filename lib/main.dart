@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sample_flutter_tdd/features/github_repository/pages/github_repository_search_page.dart';
+import 'package:sample_flutter_tdd/pages/github_repository_search_page.dart';
 
 void main() {
   runApp(const MyApp());
