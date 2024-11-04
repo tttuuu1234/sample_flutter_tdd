@@ -31,4 +31,15 @@ void main() {
       },
     );
   });
+
+  testWidgets('検索フィールドに検索ワードの入力ができるはず。', (tester) async {
+    final app = testableApp(const GithubRepositorySearchPage());
+    runApp(app);
+    await tester.pumpAndSettle();
+    final searchBarType = find.byType(SearchBar);
+
+    await tester.enterText(searchBarType, 'Flutter');
+
+    expect(find.text('Flutter'), findsOneWidget);
+  });
 }
